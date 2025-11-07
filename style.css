@@ -1,0 +1,499 @@
+/* ==================== VARIABLES ==================== */
+:root {
+  --bg: #05070d;
+  --panel: #0d0f1a;
+  --accent: #00e5ff;
+  --accent2: #8b00ff;
+  --text: #e8f7ff;
+  --muted: #8ca0b3;
+  --radius: 14px;
+  --shadow-neon: 0 0 18px var(--accent), 0 0 28px var(--accent2);
+}
+
+/* ==================== GLOBAL ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+.container {
+  width: 92%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* ==================== NAV ==================== */
+.header {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.logo {
+  font-family: "Orbitron", sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--accent);
+  text-shadow: 0 0 12px var(--accent);
+}
+
+.nav a {
+  margin-left: 20px;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.nav a:hover {
+  color: var(--accent);
+}
+
+.cart-btn {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 17px;
+  transition: 0.2s;
+}
+
+.cart-btn:hover {
+  background: var(--accent);
+  color: #000;
+}
+
+/* ==================== HERO ==================== */
+.hero {
+  padding: 90px 0;
+  background: linear-gradient(135deg, #020309, #0d0020 60%);
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 42px;
+  text-shadow: var(--shadow-neon);
+}
+
+.hero h1 span {
+  color: var(--accent);
+}
+
+.hero p {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.btn-main {
+  display: inline-block;
+  margin-top: 22px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  border: none;
+  color: #000;
+  cursor: pointer;
+  font-weight: 800;
+  transition: 0.2s;
+}
+
+.btn-main:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-neon);
+}
+
+/* ==================== PRODUCTOS ==================== */
+.products-section {
+  padding: 60px 0;
+}
+
+.title {
+  font-family: "Orbitron";
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: var(--accent);
+  text-shadow: var(--shadow-neon);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 26px;
+}
+
+.product-card {
+  background: var(--panel);
+  padding: 18px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: 0.25s ease;
+  transform-style: preserve-3d;
+  perspective: 700px;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px var(--accent2);
+}
+
+.product-img {
+  width: 100%;
+  border-radius: var(--radius);
+  margin-bottom: 14px;
+}
+
+.product-card h3 {
+  font-size: 19px;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.product-card p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.product-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.btn-add {
+  padding: 10px 16px;
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  color: #000;
+  font-weight: 800;
+  transition: 0.2s;
+}
+
+.btn-add:hover {
+  background: var(--accent2);
+  color: #fff;
+  box-shadow: var(--shadow-neon);
+}
+
+/* ==================== NOSOTROS ==================== */
+.about {
+  padding: 60px 0;
+  text-align: center;
+}
+.about p {
+  color: var(--muted);
+  width: 70%;
+  margin: auto;
+}
+
+/* ==================== CONTACTO ==================== */
+.contact-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.social-block {
+  margin-bottom: 30px;
+  color: var(--muted);
+}
+
+/* 🔥 NEÓN EN LINKS 🔥 */
+.social-list a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.25s;
+  text-shadow: 0 0 6px var(--accent2);
+}
+
+.social-list a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px var(--accent), 0 0 18px var(--accent2);
+  transform: scale(1.05);
+}
+
+.social-list li {
+  margin: 4px 0;
+}
+
+/* ==================== CARRITO ==================== */
+.cart-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.cart-modal.show {
+  display: flex;
+}
+
+.cart-panel {
+  width: 350px;
+  background: var(--panel);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.close {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--accent);
+}
+
+.cart-items {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.cart-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qty-btn {
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #000;
+  font-weight: 900;
+}
+
+/* ==================== PRODUCT VIEW ==================== */
+.product-page {
+  padding: 40px 0;
+}
+
+.product-view-content {
+  display: flex;
+  gap: 40px;
+}
+
+.product-images {
+  width: 50%;
+}
+
+.pv-main-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.pv-thumbs {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.pv-thumb {
+  width: 22%;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.pv-thumb:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-neon);
+}
+
+.product-info-box {
+  width: 45%;
+}
+
+/* ==================== SPA ==================== */
+.hidden {
+  display: none !important;
+}
+
+.section-active {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==================== HUMO REAL GRANDE ==================== */
+.smoke {
+  position: fixed;
+  width: 160px;
+  opacity: 0.85;
+  pointer-events: none;
+  filter: blur(8px);
+  animation: vapeSmoke 2s ease-out forwards;
+}
+
+@keyframes vapeSmoke {
+  0% { transform: scale(0.6) translateY(0); opacity: 0.9; }
+  50% { transform: scale(1.3) translateY(-50px); opacity: 0.5; }
+  100% { transform: scale(2.2) translateY(-100px); opacity: 0; }
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 700px) {
+
+  .product-view-content {
+    flex-direction: column;
+  }
+
+  .product-images,
+  .product-info-box {
+    width: 100%;
+  }
+
+  .about p {
+    width: 90%;
+  }
+}
+.logo-img {
+  height: 45px;     /* ✅ tamaño perfecto */
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+.logo-img {
+  height: 55px;
+}
+/* === LOGO CON MARCO NEÓN (CORREGIDO, ESTABLE) === */
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 42px;
+  width: 42px;
+  border-radius: 10px;
+  object-fit: cover;
+  padding: 3px;
+
+  /* Marco neón suave */
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  box-shadow: 0 0 6px var(--accent), 0 0 12px var(--accent2);
+  transition: box-shadow 0.25s ease;
+}
+
+.logo-img:hover {
+  box-shadow: 0 0 10px var(--accent), 0 0 18px var(--accent2);
+}
+
+.logo-text {
+  font-family: "Orbitron", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--accent);
+  text-shadow: 0 0 6px var(--accent2);
+}
+/* ---------- About image centered + neon + anims ---------- */
+.about-image {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 18px 0;
+  box-sizing: border-box;
+}
+
+.neon-frame {
+  width: 340px;
+  max-width: calc(100% - 40px);
+  padding: 10px;
+  border-radius: 15px;
+  border: 3px solid #00eaff;
+  box-shadow: 0 0 15px #00eaff;
+  display: inline-block;
+  transition: box-shadow .25s ease, transform .25s ease;
+  /* for better stacking of pseudo-element */
+  position: relative;
+  overflow: visible;
+}
+
+/* imagen */
+.neon-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* movimiento 3s (entrada y hover) */
+@keyframes floatMove3 {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-8px); }
+  70%  { transform: translateY(8px); }
+  100% { transform: translateY(0); }
+}
+
+/* borde neón colores 3s */
+@keyframes neonColors3 {
+  0%   { box-shadow: 0 0 12px #00eaff; border-color: #00eaff; }
+  25%  { box-shadow: 0 0 14px #ff00d4; border-color: #ff00d4; }
+  50%  { box-shadow: 0 0 14px #8b00ff; border-color: #8b00ff; }
+  75%  { box-shadow: 0 0 14px #00ff9d; border-color: #00ff9d; }
+  100% { box-shadow: 0 0 12px #00eaff; border-color: #00eaff; }
+}
+
+/* clase que activa la animación 3s */
+.neon-frame.animate {
+  animation: floatMove3 3s ease forwards, neonColors3 3s linear forwards;
+}
+
+/* para reiniciar la animación vía JS (no se queda con estilos inline) */
+.neon-frame.removing-animation {
+  animation: none !important;
+}
